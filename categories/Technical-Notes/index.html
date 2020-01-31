@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Catégorie: Technical Notes - Hexo</title>
+<title>Category: Technical Notes - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -136,7 +136,7 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Catégories</a></li>
+            <li><a href="/categories">Categories</a></li>
             
             <li class="is-active"><a href="#" aria-current="page">Technical Notes</a></li>
         </ul>
@@ -166,7 +166,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 208 words)
+                    2 minutes read (About 246 words)
                 </span>
                 
                 
@@ -179,54 +179,49 @@
             
         </h1>
         <div class="content">
-            <h3 id="build-my-lalaland-with-me"><a class="header-anchor" href="#build-my-lalaland-with-me">¶</a>Build My Lalaland With Me!</h3>
-<p>This is a memo for building my blog on Mac. Hope it is useful to my friends！✌</p>
-<h5 id="build-your-own-blog-using-hexo-github"><a class="header-anchor" href="#build-your-own-blog-using-hexo-github">¶</a>Build your own blog using Hexo + Github !</h5>
-<ul>
-<li>
-<p>Environment</p>
+            <h3 id="Build-My-Lalaland-With-Me"><a href="#Build-My-Lalaland-With-Me" class="headerlink" title="Build My Lalaland With Me!"></a>Build My Lalaland With Me!</h3><p>This is a memo for building my blog on Mac. Hope it is useful to my friends！✌</p>
+<h5 id="Build-your-own-blog-using-Hexo-Github"><a href="#Build-your-own-blog-using-Hexo-Github" class="headerlink" title="Build your own blog using Hexo + Github !"></a>Build your own blog using Hexo + Github !</h5><ul>
+<li><p>Environment</p>
 <ul>
 <li>OS: Mac OS X 10.13.6</li>
 </ul>
 </li>
-<li>
-<p>Preparatory</p>
+<li><p>Preparatory</p>
 <ul>
-<li>
-<p>install Node.js on this <a href="https://link.jianshu.com/?t=https://nodejs.org/en/" target="_blank" rel="noopener">site</a></p>
+<li><p>install Node.js on this <a href="https://link.jianshu.com/?t=https://nodejs.org/en/" target="_blank" rel="noopener">site</a></p>
 </li>
-<li>
-<p>Git on your mac(Xcode has git in it)</p>
+<li><p>Git on your mac(Xcode has git in it)</p>
 </li>
-<li>
-<p>Github account</p>
+<li><p>Github account</p>
 </li>
-<li>
-<p>install Hexo on your mac</p>
+<li><p>install Hexo on your mac</p>
 <p><code>$ npm install -g hexo</code></p>
 </li>
 </ul>
 </li>
-<li>
-<p>Steps</p>
+<li><p>Steps</p>
 <p>create a new folder for your blog, in the blog path, init the hexo:</p>
 <p><code>$ hexo init</code></p>
 <p>install the dependencies:</p>
 <p><code>$ npm install</code></p>
 <p>run the following:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span> hexo generate</span><br><span class="line"><span class="hljs-meta">$</span> hexo server</span><br></pre></td></tr></table></figure>
 <p>Now you can check your website on the address: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
 <p>However, others cannot visit your website by now.</p>
 <p>To update your local blog to the Internet, you need to modify the _config.yml in the path of your blog folder:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>If you haven’t set SSH keys, the repo address should be the https from.</p>
 <p>Next, install a plug-in:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$hexo clean</span><br><span class="line">$hexo generate</span><br><span class="line">$hexo deploy</span><br></pre></td></tr></table></figure>
-<p>Now, you can visit your blog by tapping <a href="http://username.github.io" target="_blank" rel="noopener">username.github.io</a> in your web browser.</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span> npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span> hexo clean</span><br><span class="line"><span class="hljs-meta">$</span> hexo generate</span><br><span class="line"><span class="hljs-meta">$</span> hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Now, you can visit your blog by tapping username.github.io in your web browser.</p>
+<p>To update your website,</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span> hexo d -g</span><br></pre></td></tr></table></figure>
+<p>This may take some time for you to see the changes on your website.</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span> hexo s</span><br></pre></td></tr></table></figure>
+<p>Use this command to see your changes on localhost:4000.</p>
 </li>
-<li>
-<p>Polishment</p>
+<li><p>Polishment</p>
 <ul>
 <li>themes: icarus</li>
 <li>emoji</li>
@@ -291,7 +286,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Articles
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
                         3
@@ -301,7 +296,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Catégories
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         2
@@ -321,7 +316,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/hhhiddleston">
-                SUIVRE</a>
+                Follow</a>
         </div>
         
         
@@ -358,7 +353,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Liens
+            Links
         </h3>
         <ul class="menu-list">
         
@@ -396,7 +391,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catégories
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -425,7 +420,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Nuage de tags
+            Tag Cloud
         </h3>
         <a href="/tags/Emotion/" style="font-size: 20px;">Emotion</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
     </div>
@@ -439,7 +434,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -569,7 +564,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -854,9 +849,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Articles',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Catégories',
+                CATEGORIES: 'Categories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
