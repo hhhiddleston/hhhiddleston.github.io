@@ -1,0 +1,20 @@
+<li class="conference-item">
+  <span class="conference-text">{{ include.conference | markdownify }}</span>
+  {% include button.html link=include.code_link text='Code' %}
+  {% include button.html link=include.arxiv_link text='Paper' %}
+</li>
+  
+
+<style>
+    .conference-item {
+        display: inline-flex; /* Keeps everything in the same row */
+        align-items: flex-end; /* Aligns text and buttons properly */
+        gap: 10px; /* Spacing between text and buttons */
+        list-style-type: disc; /* Ensures bullet point appears */
+    }
+
+    .conference-text {
+        white-space: nowrap;
+    }
+</style>
+  
